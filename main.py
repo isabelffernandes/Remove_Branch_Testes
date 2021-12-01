@@ -1,5 +1,7 @@
 from subprocess import check_output
+
 import sys
+
 
 def get_merged_branches():
 
