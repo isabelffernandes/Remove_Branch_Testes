@@ -1,7 +1,10 @@
 from subprocess import check_output
+
+
 import sys
 
 def get_merged_branches():
+
 
     raw_results = check_output('git branch --merged master', shell=True)
     
@@ -15,6 +18,7 @@ def get_merged_branches():
 
 def delete_branch(branch):
     return check_output('git branch -D %s' % branch, shell=True).strip()
+
 
 for branch in get_merged_branches():
     delete_branch(branch)
