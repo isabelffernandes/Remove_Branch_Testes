@@ -1,6 +1,4 @@
 
-
-
 from subprocess import check_output
 
 
@@ -10,7 +8,9 @@ import sys
 def get_merged_branches():
 
 
-    raw_results = check_output('git branch --merged master', shell=True)
+    raw_results = check_output('git branch --merged master', 
+    
+    shell=True)
     
 
     branchs = []
